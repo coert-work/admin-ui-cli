@@ -1,0 +1,16 @@
+{
+  "env": {
+
+    "development": {
+      "presets": ["@babel/preset-env", "@babel/react"]
+    },
+
+    "production": {
+      "presets": ["@babel/preset-env", "@babel/react"]
+    },
+
+    "TEST": {
+      "presets": [["es2015", { "modules": "commonjs"} ], "react", "jest"]
+    }
+  }
+}

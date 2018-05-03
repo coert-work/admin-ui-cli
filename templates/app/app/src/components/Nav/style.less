@@ -1,0 +1,89 @@
+@import '~LESS/variables.less';
+  
+@nav-height: 60px;
+
+
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: @nav-height;
+    background-color: white;
+    line-height: @nav-height;
+    box-shadow: @boxShadow;
+    z-index: 2;
+    padding: 0 10px 0 10px;
+
+
+    .logo {
+      background: @charcoal;
+      height: @nav-height;
+      padding: 10px 0 10px 20px;
+    }
+
+    @media only screen and (max-width: @tablet) {
+      .logo {
+          background: @white;
+      }
+    }
+
+    .icon {
+      display: inline-block;
+      margin: 0 5px;
+
+      &.lg {
+        font-size: 18px;
+      }
+
+      &.sm {
+        font-size: 22px;
+        height: 22px;
+      }
+    }
+
+    .title {
+      margin-left: 5px;
+
+      .title-text {
+        font-size: 18px;
+      }
+    }
+
+    .user-link {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      max-width: 300px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+    }
+
+
+    .user-text {
+      font-weight: 500;
+      font-size: 16px;
+      vertical-align: top;
+    }
+
+    .help-btn {
+      position: absolute;
+      right: 20px;
+      top: 10px;
+      width: 120px;
+      font-size: 14px;
+      height: 35px;
+      line-height: 25px;
+      text-align: center;
+      background: @medGrey;
+      border-radius: 5px;
+      overflow: hidden;
+
+      svg {
+        height: 10px;
+      }
+    }
+  }
+
+

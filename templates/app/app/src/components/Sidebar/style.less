@@ -1,0 +1,88 @@
+@import '~LESS/variables.less';
+
+  .sidebar {
+    position: relative;
+    background-color: @charcoal;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    color: white;
+    padding-top: 70px;
+    box-shadow: @boxShadow;
+    overflow: visible;
+
+    .link {
+      display: block;
+      color: @medGrey;
+      font-size: 13px;
+      height: 50px;
+      line-height: 50px;
+      padding-left: 15px;
+      cursor: pointer;
+      text-decoration: none;
+      overflow: visible;
+    }
+
+    .sublink {
+      color: @medGrey;
+      font-size: 13px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .menuItems {
+      margin-top: 40px;
+    }
+
+    .icon {
+      display: inline-block;
+      margin-right: 10px;
+      height: 18px;
+      width: 20px;
+    }
+
+    .icon-chevron {
+      height: 8px;
+      width: 8px;
+      margin-right: 20px
+    }
+
+    @media only screen and (max-width: @tablet) {
+      
+      .link {
+        text-align: center !important;
+      }
+
+      .submenu-link {
+        text-align: left !important;
+      }
+    }
+
+    .active {
+      color: @white;
+    }
+
+    .submenu {
+      left: 100%;
+      top: -50px;
+      display: none;
+      position: relative;
+      width: 200px;
+      z-index: 3;
+      background-color: @charcoal;
+    }
+
+    .submenu-link {
+      height: 50px;      
+      line-height: 50px;
+      padding-left: 15px; 
+    }
+
+    .link:hover, .submenu-link:hover {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .link:hover .submenu {
+      display: block;
+    }
+  }
