@@ -67,7 +67,7 @@ Element
 
 # Getting started on a new Feature
 
-For this example, Let's assume we have to add the feature to an app that lives in the `existing-project` directory, and that directory is a sibling of this repo's directory.
+For this example, let's assume we have to add the feature to an app that lives in the `existing-project` directory, and that directory is a sibling of this repo's directory.
 
 Start the cli with the correct target directory:  `cd admin-ui-cli && npm start -t=existing-project`
 
