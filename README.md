@@ -63,7 +63,9 @@ Element
 
 # Getting started on a new Feature
 
-Start the cli with the correct target directory:  `cd tal-admin-ui-cli && npm start -t=existing-project`
+For this example, Let's assume we have to add the feature to an app that lives in the `existing-project` directory, and that directory is a sibling of this repo's directory.
+
+Start the cli with the correct target directory:  `cd admin-ui-cli && npm start -t=existing-project`
 
 type ```help``` in the CLI.
 
@@ -92,7 +94,7 @@ In the terminal:
 
 - git clone this repo
 
-- type ```cd cli && npm start -t=your-new-project```
+- type ```cd admin-ui-cli && npm start -t=your-new-project```
 
 - type ``` new-app``` into CLI
 
