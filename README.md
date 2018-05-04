@@ -1,6 +1,8 @@
-# Takealot admin UI CLI
+# Admin UI CLI
 
-This is a tool to help automate some common admin UI-related tasks. If it gains adoption, it will help us standardize the way we build admin UIs throughout the company.
+This is a tool to help automate some common admin UI-related tasks. If it gains adoption, it could help us standardize the way we build admin UIs throughout the company.
+
+This is a modified version of Tim Lycett's work, so thanks Tim!
 
 # Dev Status:
 > 
@@ -9,13 +11,12 @@ In the process of turning this into a tool anyone in the company can use to buil
 
 The idea is for master branch to be very very basic, and that we create branches for different toolsets / use cases.
 
-Future branches include a redux integration branch and deployment configuration branch.
+Future branches include a redux integration branch and a deployment configuration branch.
 # Usage
 
 ## Starting parameters
 
-`-t=dir-name`    :     Target directory. This is the directory where cli operations will be performed. The given value is automatically prepended with `../` in order to transform it into a path, so the target directory will always be a sibling of the `cli` directory. 
-Defaults to `app`.
+`-t=dir-name`    :     Target directory. This is the directory where cli operations will be performed. The given value is automatically prepended with `../` in order to transform it into a path, so the target directory will always be a sibling of the `cli` directory. Defaults to `app`.
 
 ## Commands
 
