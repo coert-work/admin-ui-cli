@@ -9,6 +9,7 @@ const chalk = require('chalk');
 const open = require('open');
 const path = require('path')
 const os = require('os')
+const argv = require('yargs').argv
 
 // fresh slate
 console.clear();
@@ -21,6 +22,9 @@ const STACK = {
   // TEST: false,
   // PROXY: false
 };
+
+const TARGET = argv.t || 'app'
+const TARGET_PATH = '../' + TARGET
 
 // Exit handler
 process.on('exit', code => {
@@ -118,9 +122,9 @@ include('./scripts/git.js');
 
 
 // CLI init
-vorpal.delimiter('$takealot-admin-ui: ').show();
+vorpal.delimiter(`$ui<${TARGET}>: `).show();
 
-if (fs.existsSync('../app')) {
+if (fs.existsSync(TARGET_PATH)) {
 
   vorpal.exec('startup');
   vorpal.exec('app');

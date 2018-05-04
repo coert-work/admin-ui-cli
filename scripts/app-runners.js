@@ -2,7 +2,7 @@ vorpal.command('app')
   .description('Start App')
   .action((params, cb) => {
 
-    STACK.APP = exec('cd ../app && npm run app-start', {async:true}, (err) => {
+    STACK.APP = exec(`cd ${TARGET_PATH} && npm run app-start`, {async:true}, (err) => {
       if (err) { console.error(err); return }
     });
 

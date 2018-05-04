@@ -1,11 +1,6 @@
 
 // Check for base dependencies
 if (!shell.which('git')) { shell.echo('please install git'); shell.exit(1) }
-if (!shell.which('docker')) { shell.echo('URGENT :: please install docker') }
-if (!shell.which('minikube')) { shell.echo('ALERT :: please install minikube & kubernetes') }
-
-
-
 
 
 /** STARTUP **/
@@ -31,7 +26,7 @@ vorpal.command('startup')
 .description('run first time installs')
 .action((params, cb) => {
 
-  if (fs.existsSync('../app/node_modules')) {
+  if (fs.existsSync(`${TARGET_PATH}/node_modules`)) {
     // console.log('Everything previously installed');
   } else {
     console.log(chalk.white('----------------------------------------'));
@@ -39,7 +34,7 @@ vorpal.command('startup')
     console.log(chalk.yellow('Hold on to your horses! this may take a while .... '));
     console.log(chalk.white('----------------------------------------'));
 
-    shell.exec('cd ../app && npm i');
+    shell.exec(`cd ${TARGET_PATH} && npm i`);
     console.log(chalk.yellow('Everything installed, type   npm start   to get going ;) '));
   }
   cb()

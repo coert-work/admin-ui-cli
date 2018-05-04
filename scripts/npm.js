@@ -1,7 +1,7 @@
 vorpal
 .command('npm [argz...]')
-.description('Run NPM commands in ./app folder')
+.description(`Run NPM commands in ${TARGET} folder`)
 .action((params, cb) => {
-  shell.exec('cd ../app && npm ' + params.argz.join(' '));
+  shell.exec(`cd ${TARGET_PATH} && npm ` + params.argz.join(' '));
   cb()
 });

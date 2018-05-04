@@ -34,7 +34,7 @@ vorpal.command('create component [argz...]')
   const name = params.argz[0];
   const mod = require(`./templates/react/component`);
 
-  let writePath = '../app/src/components/';
+  let writePath = `${TARGET_PATH}/src/components/`;
   if (params.argz[1] && params.argz[1] === 'at') { 
     /* render to subpath */
     writePath = '../app/src/' + params.argz[2];
@@ -55,7 +55,7 @@ vorpal.command('create element [argz...]')
   const name = params.argz[0];
   const mod = require(`./templates/react/element`);
 
-  let writePath = '../app/src/elements/';
+  let writePath = `${TARGET_PATH}/src/elements/`;
   if (params.argz[1] && params.argz[1] === 'at') { 
     /* render to subpath */
     writePath = params.argz[2];
@@ -74,7 +74,7 @@ vorpal.command('create mod[argz...]')
 
   const name = params.argz[0];
 
-  writeFile(`../app/src/mods/${name}/index.js`, `export default { }`, (err) => { if (err) { console.log(err) } });
-  writeFile(`../app/src/mods/${name}/test.spec.js`, `//TODO`, (err) => { if (err) { console.log(err) } });
+  writeFile(`${TARGET_PATH}/src/mods/${name}/index.js`, `export default { }`, (err) => { if (err) { console.log(err) } });
+  writeFile(`${TARGET_PATH}/src/mods/${name}/test.spec.js`, `//TODO`, (err) => { if (err) { console.log(err) } });
   cb()
 });

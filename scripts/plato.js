@@ -4,8 +4,8 @@ vorpal.command('doc')
   .action((params, cb) => {
 
   var plato = require('plato');
-  const src = '../app/src/**/*.js';
-  const outputDir = '../app/docs/plato';
+  const src = `${TARGET_PATH}/src/**/*.js`;
+  const outputDir = `${TARGET_PATH}/docs/plato`;
 
   let platoArgs = {
     title: 'Takealot admin UI',
@@ -58,9 +58,9 @@ vorpal.command('doc')
   open(`${outputDir}/index.html`);
 
   // run esdoc as well
-  shell.exec('cd ../app && npm run doc');
+  shell.exec(`cd ${TARGET_PATH} && npm run doc`);
   setTimeout(() => {
-    open('../app/docs/esdoc/index.html');
+    open(`${TARGET_PATH}/docs/esdoc/index.html`);
   }, 3000)
 
   cb()
