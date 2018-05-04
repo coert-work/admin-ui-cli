@@ -10,50 +10,7 @@ In the process of turning this into a tool anyone in the company can use to buil
 The idea is for master branch to be very very basic, and that we create branches for different toolsets / use cases.
 
 Future branches include a redux integration branch and deployment configuration branch.
-
-
-# Core Technologies:
-> 
-React 16
-
-React Router 4
-
-Webpack 3
-
-Less / SCSS
-
-Babel
-
-Semantic UI
-
-
-
-# Testing 
-
-Jest
-
-Puppeteer
-
-
-# Documentation
-
-ESDOC documentation
-
-Plato Code Analysis
-
-Instanbul Code Coverage
-
-Puppeteer Snapshots
-
-
-# Analytics and Error Logging
-
-Google Tag Manager is used for User Analytics.
-
-Sentry.io + Raven.js is used for errors in production/staging.
-
-
-# CLI
+# Usage
 
 ## Starting parameters
 
@@ -100,54 +57,13 @@ Element
 
 
 
-# Methodology / File Structure
-
-
-## Containers:
-
-#### Index - layout file 
-
-  - Should generally only contain constructor, mount and render or pure render layout logic
-
-  - Should pass down props and relative state
-
-#### ACTIONS
-
-  - Should only contain functions (all actions generally will be bound to the class)
-
-  - Should not make requests - calls on API file
-
-#### API
-
-  - Should handle any OTA transactions and pass back to the actions
-
-  - Does not bind to class and operates as a raw JS object for ACTIONS
-
-#### style.less
-
-  - Should use global variables in line with style guide
-
-  - Each component should have a holding class and all relative elements should be nested within the class. (CSS component scoping)
-
-#### test.spec
-  - Should contain one failing test from the get go
-
-  - Should provide comprehensive tests relative to the container
-
-
-## Mods
-
-MODS are native JS object files with helper methods to use across the system
-
-
-
 
 
 
 
 # Getting started on a new Feature
 
-once you have run npm start in either the ./app or ./cli folder, 
+Start the cli with the correct target directory:  `cd tal-admin-ui-cli && npm start -t=existing-project`
 
 type ```help``` in the CLI.
 
@@ -172,17 +88,11 @@ to create a new View, try these commands:
 
 # Starting a new Project
 
-Using this as a template? Try this in terminal:
+In the terminal:
 
 - git clone this repo
 
-- DELETE the old ```.git``` folder
-
-- DELETE the old ```app``` folder
-
-- ```git init``` to start your new repo
-
-- type ```cd cli && npm start```
+- type ```cd cli && npm start -t=your-new-project```
 
 - type ``` new-app``` into CLI
 
