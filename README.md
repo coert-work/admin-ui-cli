@@ -12,6 +12,9 @@ In the process of turning this into a tool anyone in the company can use to buil
 The idea is for master branch to be very very basic, and that we create branches for different toolsets / use cases.
 
 Future branches include a redux integration branch and a deployment configuration branch.
+
+There is still A LOT left to do.
+
 # Usage
 
 ## Starting parameters
@@ -77,7 +80,7 @@ to create a new View, try these commands:
 - ```create component Test at containers/TestView/components/```
 
 
-> in your IDE, open ./app/src/containers/App/index.js
+> in your IDE, open ../existing-project/src/containers/App/index.js
 
 - add ```import TestView from 'CONTAINER/TestView' ``` to top of file.
 
